@@ -14,12 +14,11 @@ ACTOR HighExplosiveGrenadeRounds : Ammo
 	Inventory.PickupMessage "You found High Explosive Grenade Rounds"
 	States
 	{
-	Spawn:
+Spawn:
 		LHEG A -1
 		Stop
 	}
 }
-
 ACTOR SpecialGrenadeRounds : Ammo
 {
 	Game Doom
@@ -36,12 +35,11 @@ ACTOR SpecialGrenadeRounds : Ammo
 	Inventory.PickupMessage "$You found Special Grenade Rounds"
 	States
 	{
-	Spawn:
+Spawn:
 		LPHG A -1
 		Stop
 	}
 }
-
 ACTOR PistolBullets : Ammo 
 {
 	Scale .58
@@ -58,13 +56,11 @@ ACTOR PistolBullets : Ammo
 	Inventory.PickupMessage "Picked up a Small Caliber Magazine"
 	States
 	{
-	Spawn:
+Spawn:
 		MBLK A -1
 		Stop
 	}
 }
-
-
 ACTOR TankAmmo : Ammo
 {
 	Game Doom
@@ -77,13 +73,11 @@ ACTOR TankAmmo : Ammo
 	Inventory.Icon "NULL"
 	States
 	{
-	Spawn:
+Spawn:
 		CLIP A -1
 		Stop
 	}
 }
-
-
 ACTOR MechAmmo : Ammo
 {
 	Game Doom
@@ -96,15 +90,11 @@ ACTOR MechAmmo : Ammo
 	Inventory.Icon "NULL"
 	States
 	{
-	Spawn:
+Spawn:
 		CLIP A -1
 		Stop
 	}
 }
-
-
-
-
 ACTOR HeavyMachinegunAmmo : Ammo
 {
 	Game Doom
@@ -116,14 +106,11 @@ ACTOR HeavyMachinegunAmmo : Ammo
 	Inventory.Icon "NULL"
 	States
 	{
-	Spawn:
+Spawn:
 		CLIP A -1
 		Stop
 	}
 }
-
-
-
 ACTOR MechRocketAmmo : Ammo
 {
 	Game Doom
@@ -135,13 +122,11 @@ ACTOR MechRocketAmmo : Ammo
 	Inventory.Icon "NULL"
 	States
 	{
-	Spawn:
+Spawn:
 		CLIP A -1
 		Stop
 	}
 }
-
-
 ACTOR MechLaserAmmo : Ammo
 {
 	Game Doom
@@ -153,14 +138,11 @@ ACTOR MechLaserAmmo : Ammo
 	Inventory.Icon "NULL"
 	States
 	{
-	Spawn:
+Spawn:
 		CLIP A -1
 		Stop
 	}
 }
-
-
-
 ACTOR MechMOrtarAmmo : Ammo
 {
 	Game Doom
@@ -172,14 +154,11 @@ ACTOR MechMOrtarAmmo : Ammo
 	Inventory.Icon "NULL"
 	States
 	{
-	Spawn:
+Spawn:
 		CLIP A -1
 		Stop
 	}
 }
-
-
-
 ACTOR HelicopterRocketAmmo : Ammo
 {
 	Game Doom
@@ -191,7 +170,7 @@ ACTOR HelicopterRocketAmmo : Ammo
 	Inventory.Icon "NULL"
 	States
 	{
-	Spawn:
+Spawn:
 		CLIP A -1
 		Stop
 	}

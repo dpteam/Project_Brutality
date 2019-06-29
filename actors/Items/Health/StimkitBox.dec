@@ -5,26 +5,25 @@ ACTOR StimkitBox : Health
 	+DONTGIB
 	States
 	{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 1 ACS_NamedExecuteAlways("SmartScavengerHealthScript",0)
-			TNT1 A 10
-			Stop
-		SpawnSmartScavGreen:
-			TNT1 A 1 A_SpawnItemEx("SmartStimkitBoxGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
-		SpawnSmartScavWhite:
-			TNT1 A 1 A_SpawnItemEx("SmartStimkitBoxWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
-		SpawnNormalGreen:
-			TNT1 A 1 A_SpawnItemEx("NormalStimkitBoxGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
-		SpawnNormalWhite:
-			TNT1 A 1 A_SpawnItemEx("NormalStimkitBoxWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
+Spawn:
+		TNT1 A 0
+		TNT1 A 1 ACS_NamedExecuteAlways("SmartScavengerHealthScript",0)
+		TNT1 A 10
+		Stop
+SpawnSmartScavGreen:
+		TNT1 A 1 A_SpawnItemEx("SmartStimkitBoxGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
+SpawnSmartScavWhite:
+		TNT1 A 1 A_SpawnItemEx("SmartStimkitBoxWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
+SpawnNormalGreen:
+		TNT1 A 1 A_SpawnItemEx("NormalStimkitBoxGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
+SpawnNormalWhite:
+		TNT1 A 1 A_SpawnItemEx("NormalStimkitBoxWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
 	}
 }
-
 ACTOR SmartStimkitBoxGreen : SwitchableDecoration
 {
 	+LOOKALLAROUND
@@ -36,24 +35,24 @@ ACTOR SmartStimkitBoxGreen : SwitchableDecoration
 	Scale 1
 	States
 	{
-	Spawn:
+Spawn:
 		M4DI A 1 A_Look
 		Loop
-	Pickup:
+Pickup:
 		M4DI A 1
 		Fail
-	See:
+See:
 		M4DI A 1 A_JumpIfCloser(36,"CheckPlayerPack")
 		Loop
-	CheckPlayerPack:
+CheckPlayerPack:
 		TNT1 A 0 A_JumpIfInTargetInventory("Stimkit",0,"FullFail")
 		TNT1 A 0 A_JumpIfInTargetInventory("Stimkit",8,"SpawnStimkits")
 		Goto SpawnBox
-	SpawnBox:
+SpawnBox:
 		TNT1 A 0 A_SpawnItemEx("NormalStimkitBoxGreen")
 		Stop
-	Active:
-	SpawnStimkits:
+Active:
+SpawnStimkits:
 		TNT1 A 0 A_ChangeFlag("USESPECIAL", 0)
 		M4DI A 15
 		M4DI B 10 A_PlaySound("Ammocase/Open")
@@ -63,18 +62,17 @@ ACTOR SmartStimkitBoxGreen : SwitchableDecoration
 		M4DI E 10
 		TNT1 A 0 ACS_NamedExecuteAlways("SmartScavContainerStay",0)
 		M4DI A 70
-	 FadeOut:
+FadeOut:
 		M4DI A 5 A_FadeOut(0.1,1)
 		Loop
-	FullFail:
+FullFail:
 		M4DI A 5
 		Goto See
-	RemainOpen:
+RemainOpen:
 		M4DI E -1
 		Stop
 	}
 }
-
 ACTOR SmartStimkitBoxWhite : SwitchableDecoration
 {
 	+LOOKALLAROUND
@@ -86,24 +84,24 @@ ACTOR SmartStimkitBoxWhite : SwitchableDecoration
 	Scale 1
 	States
 	{
-	Spawn:
+Spawn:
 		M4DW A 1 A_Look
 		Loop
-	Pickup:
+Pickup:
 		M4DW A 1
 		Fail
-	See:
+See:
 		M4DW A 1 A_JumpIfCloser(36,"CheckPlayerPack")
 		Loop
-	CheckPlayerPack:
+CheckPlayerPack:
 		TNT1 A 0 A_JumpIfInTargetInventory("Stimkit",0,"FullFail")
 		TNT1 A 0 A_JumpIfInTargetInventory("Stimkit",8,"SpawnStimkits")
 		Goto SpawnBox
-	SpawnBox:
+SpawnBox:
 		TNT1 A 0 A_SpawnItemEx("NormalStimkitBoxWhite")
 		Stop
-	Active:
-	SpawnStimkits:
+Active:
+SpawnStimkits:
 		TNT1 A 0 A_ChangeFlag("USESPECIAL", 0)
 		M4DW A 15
 		M4DW B 10 A_PlaySound("Ammocase/Open")
@@ -113,18 +111,17 @@ ACTOR SmartStimkitBoxWhite : SwitchableDecoration
 		M4DW E 10
 		TNT1 A 0 ACS_NamedExecuteAlways("SmartScavContainerStay",0)
 		M4DW A 70
-	 FadeOut:
+FadeOut:
 		M4DW A 5 A_FadeOut(0.1,1)
 		Loop
-	FullFail:
+FullFail:
 		M4DW A 5
 		Goto See
-	RemainOpen:
+RemainOpen:
 		M4DW E -1
 		Stop
 	}
 }
-
 ACTOR NormalStimkitBoxGreen : CustomInventory
 {
 	+DONTGIB
@@ -134,15 +131,14 @@ ACTOR NormalStimkitBoxGreen : CustomInventory
 	Scale 1
 	States
 	{
-	Spawn:
+Spawn:
 		M4DI A -1
 		Stop
-	Pickup:
-	    M4DI A 0 A_GiveInventory("Stimkit", 3)
+Pickup:
+		M4DI A 0 A_GiveInventory("Stimkit", 3)
 		Stop
 	}
 }
-
 ACTOR NormalStimkitBoxWhite : CustomInventory
 {
 	+DONTGIB
@@ -152,11 +148,11 @@ ACTOR NormalStimkitBoxWhite : CustomInventory
 	Scale 1
 	States
 	{
-	Spawn:
+Spawn:
 		M4DW A -1
 		Stop
-	Pickup:
-	    M4DW A 0 A_GiveInventory("Stimkit", 3)
+Pickup:
+		M4DW A 0 A_GiveInventory("Stimkit", 3)
 		Stop
 	}
 }

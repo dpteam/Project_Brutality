@@ -1,0 +1,24 @@
+#library "realism"
+#include "zcommon.acs"
+script 289 (void)
+{
+	if ((GameSkill() == 32)) {
+		SetActorProperty(1, APROP_Health, 39321);
+	} else {
+		if (!(GameSkill() == 31)) {
+			Terminate;
+		}
+		SetActorProperty(1, APROP_Health, 85196);
+	}
+	Terminate;
+}
+script 294 (void)
+{
+	SetActorProperty(1, APROP_Health, 26214);
+	Terminate;
+}
+script 295 (void)
+{
+	SetActorProperty(1, APROP_Health, 65536);
+	Terminate;
+}

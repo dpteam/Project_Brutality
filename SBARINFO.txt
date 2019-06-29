@@ -1,7 +1,6 @@
 base Doom;
 height 32;
 monospacefonts true, "0";
-
 statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutality
 {
 	//health
@@ -14,17 +13,12 @@ statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutal
 		drawimage "MEDIA0", 20, -2, centerbottom;
 	}
 	drawnumber 2147483647, HUDFONT_DOOM, untranslated, health, drawshadow, 82, -20;
-
 	//armor
 	drawimage armoricon, 20, -24, centerbottom;
 	drawnumber 2147483647, HUDFONT_DOOM, untranslated, armor, drawshadow, whennotzero, 82, -39;
-
 	//ammo
 	drawimage ammoicon1, -14, -4, centerbottom;
 	drawnumber 2147483647, HUDFONT_DOOM, untranslated, ammo1, drawshadow, -25, -20;
-	
-	
-	
 	usesammo
 	{
 		//secondary ammo and inventory
@@ -32,7 +26,6 @@ statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutal
 		{
 			drawimage ammoicon2, -14, -22, centerbottom;
 			drawnumber 2147483647, HUDFONT_DOOM, untranslated, ammo2, drawshadow, -25, -38;
-				
 			//special shit for AR grenade launcher
 			IsSelected "Rifle"
 			{
@@ -65,7 +58,6 @@ statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutal
 			{
 				drawimage "DEGTA0", -14, -39, centerbottom;
 				drawnumber 2147483647, HUDFONT_DOOM, untranslated, ammo FreezerPistolAmmo, drawshadow, -25, -56;
-				
 				inventorybarnotvisible
 				{
 					drawselectedinventory centerbottom, drawshadow, alwaysshowcounter, HUDFONT_DOOM, -14, -57, -25, -74, untranslated;
@@ -76,7 +68,6 @@ statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutal
 			{
 				drawimage "XDT5B0", -14, -39, centerbottom;
 				drawnumber 2147483647, HUDFONT_DOOM, untranslated, ammo MeatAmmo, drawshadow, -25, -56;
-				
 				inventorybarnotvisible
 				{
 					drawselectedinventory centerbottom, drawshadow, alwaysshowcounter, HUDFONT_DOOM, -14, -57, -25, -74, untranslated;
@@ -107,7 +98,6 @@ statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutal
 			drawselectedinventory centerbottom, drawshadow, alwaysshowcounter, HUDFONT_DOOM, -14, -3, -25, -20, untranslated;
 		}
 	}
-
 	//mines and grenades
 	PlayerType "Traditional"
 	{
@@ -128,7 +118,6 @@ statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutal
 			drawnumber 4, SMALLFONT, red, Ammo MineAmmo, alignment(center), -109, -8, 0;
 		}
 	}
-
 	//frags
 	gamemode deathmatch, teamgame
 	{
@@ -141,7 +130,6 @@ statusbar fullscreen, fullscreenoffsets // Modified ZDoom HUD for Project Brutal
 		drawkeybar 100, vertical, reverserows, auto, -10, 2, 0, 3, auto;
 	}
 }
-
 statusbar normal // Modified Doom Status bar
 {
 	drawimage "STBAR", 0, 168;
@@ -149,8 +137,6 @@ statusbar normal // Modified Doom Status bar
 	drawimage "STTPRCNT", 221, 171;
 	drawnumber 3, HUDFONT_DOOM, untranslated, health, 90, 171;
 	drawnumber 3, HUDFONT_DOOM, untranslated, armor, 221, 171;
-	
-	
 	//Railgun zoom frames
 	IsSelected "Rail_Gun"
 	{
@@ -158,7 +144,6 @@ statusbar normal // Modified Doom Status bar
 		InInventory "RailgunCooldown" , 2 {DrawImage "R116C0",  -170,0;}
 		InInventory "RailgunCooldown" , 3 {DrawImage "R116D0",  -170,0;}
 		InInventory "RailgunCooldown" , 4 {DrawImage "R116E0",  -170,0;}
-		
 		InInventory "RailgunZoomed" ,   1 
 		{
 			InInventory "MicrowaveActivated", 1
@@ -171,11 +156,7 @@ statusbar normal // Modified Doom Status bar
 			InInventory "MicrowaveCharge" , 5  {DrawImage "R216B0",  -170,0;}
 			else {DrawImage "R116A0",  -170,0;}
 		}
-		
-		
-		
 	}
-	
 	//special shit for AR grenade launcher
 	IsSelected "Rifle"
 	{
@@ -195,7 +176,6 @@ statusbar normal // Modified Doom Status bar
 	IsSelected "Machinegun"
 	{
 		drawnumber 3, HUDFONT_DOOM, untranslated, ammo1, 44, 171;
-		
 		InInventory "FiredMGGrenade", 1
 		{
 			drawimage "GENRED", 42, 169;
@@ -253,7 +233,6 @@ statusbar normal // Modified Doom Status bar
 			drawnumber 3, HUDFONT_DOOM, untranslated, ammo1, 44, 171;
 		}
 	}
-	
 	//normal weapons
 	IsSelected not "LMG", "Machinegun"
 	IsSelected not "FreezerRifle", "Unmaker"
@@ -268,23 +247,19 @@ statusbar normal // Modified Doom Status bar
 			drawnumber 3, HUDFONT_DOOM, untranslated, ammo1, 44, 171;
 		}
 	}
-	
 	//keys
 	drawswitchableimage keyslot 2 && 5, "nullimage", "STKEYS0", "STKEYS3", "STKEYS6", 239, 171;
 	drawswitchableimage keyslot 3 && 6, "nullimage", "STKEYS1", "STKEYS4", "STKEYS7", 239, 181;
 	drawswitchableimage keyslot 1 && 4, "nullimage", "STKEYS2", "STKEYS5", "STKEYS8", 239, 191;
-
 	//total ammo
 	PlayerType "BrutalDoomer"
 	{
 		drawimage "STPBAMMO", 249, 168;
-
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo PistolBullets, 283, 170;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo NewShell, 283, 176;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo HighExplosiveGrenadeRounds, 283, 182;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo Cell, 283, 188;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo Gas, 283, 194;
-
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo NewClip, 318, 170;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo RocketAmmo, 318, 176;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo SpecialGrenadeRounds, 318, 182;
@@ -294,12 +269,10 @@ statusbar normal // Modified Doom Status bar
 	PlayerType "Purist"
 	{
 		drawimage "STBDAMMO", 249, 168;
-
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo NewClip, 283, 171;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo NewShell, 283, 178;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo RocketAmmo, 283, 185;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo Cell, 283, 192;
-
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo PistolBullets, 318, 171;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo Gas, 318, 178;
 		DrawNumber 3, INDEXFONT_DOOM, untranslated, Ammo MiniHellRocketAmmo, 318, 185;
@@ -308,18 +281,15 @@ statusbar normal // Modified Doom Status bar
 	PlayerType "Traditional"
 	{
 		drawimage "STTRAMMO", 249, 168;
-
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammo NewClip, 288, 173;
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammo NewShell, 288, 179;
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammo RocketAmmo, 288, 185;
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammo Cell, 288, 191;
-
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity NewClip, 314, 173;
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity NewShell, 314, 179;
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity RocketAmmo, 314, 185;
 		drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity Cell, 314, 191;
 	}
-
 	//grenades and mines
 	PlayerType "Traditional"
 	{
@@ -336,18 +306,15 @@ statusbar normal // Modified Doom Status bar
 		{
 			drawimage "PGRND0", -15, 183, center;
 			drawnumber 4, SMALLFONT, red, Ammo HandGrenadeAmmo, alignment(center), -15, 183, 0;
-
 			drawimage "XPFPA0", 336, 183, center, 35, 35;
 			drawnumber 4, SMALLFONT, red, Ammo MineAmmo, alignment(center), 335, 183, 0;
 		}
 	}
-
 	//frags
 	gamemode deathmatch, teamgame
 	{
 		drawnumber 2, HUDFONT_DOOM, untranslated, frags, 138, 171;
 	}
-	
 	//arms
 	gamemode cooperative, singleplayer
 	{
@@ -359,7 +326,6 @@ statusbar normal // Modified Doom Status bar
 		drawswitchableimage weaponslot 6, "STGNU26", "STYSNU26", 123, 182;
 		drawswitchableimage weaponslot 7, "STGNU27", "STYSNU27", 135, 182;
 	}
-	
 	gamemode cooperative, deathmatch, teamgame
 	{
 		drawimage translatable "STFBANY", 143, 169;
@@ -369,14 +335,12 @@ statusbar normal // Modified Doom Status bar
 		drawmugshot "STF", 5, 143, 168;
 	}
 }
-
 //totally not stolen from complex doom
 statusbar inventoryfullscreen, fullscreenoffsets // Inventory stuff for Fullscreen statusbar
 {
-   DrawInventoryBar Doom, Translucent, 6, INDEXFONT_DOOM, -96 + Center, 0, -68 + Center, 2, White;
+	DrawInventoryBar Doom, Translucent, 6, INDEXFONT_DOOM, -96 + Center, 0, -68 + Center, 2, White;
 }
 statusbar inventory, fullscreenoffsets // Inventory stuff for Normal statusbar
 {
-   DrawInventoryBar Doom, Translucent, 6, INDEXFONT_DOOM, -96 + Center, 0, -68 + Center, 2, White;
+	DrawInventoryBar Doom, Translucent, 6, INDEXFONT_DOOM, -96 + Center, 0, -68 + Center, 2, White;
 }
-

@@ -1,5 +1,8 @@
 (NEEDS TO BE UPDATED BY FINAL RELEASE)
 
+Project Brutality Refactor
+DartPower
+
 Extra rotations for PLAY  A - G
 John Romero
 

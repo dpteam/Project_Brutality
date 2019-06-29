@@ -1,0 +1,7 @@
+#library "dopunch"
+#include "zcommon.acs"
+script 3757 (void)
+{
+	GiveInventory("DoPunch", 1);
+	Terminate;
+}

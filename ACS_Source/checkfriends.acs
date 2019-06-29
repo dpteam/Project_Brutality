@@ -1,0 +1,9 @@
+#library "checkfriends"
+#include "zcommon.acs"
+
+script 647 enter
+{
+	//ClearInventory();
+	GiveInventory("CheckMarines", 1);
+	Thing_ChangeTID (0, 264);
+}

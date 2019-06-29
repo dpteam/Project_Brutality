@@ -6,26 +6,25 @@ ACTOR NewMedipack : Health
 	SpawnID 7040
 	States
 	{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 1 ACS_NamedExecuteAlways("SmartScavengerHealthScript",0)
-			TNT1 A 10
-			Stop
-		SpawnSmartScavGreen:
-			TNT1 A 1 A_SpawnItemEx("SmartMedipackGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
-		SpawnSmartScavWhite:
-			TNT1 A 1 A_SpawnItemEx("SmartMedipackWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
-		SpawnNormalGreen:
-			TNT1 A 1 A_SpawnItemEx("NormalMedipackGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
-		SpawnNormalWhite:
-			TNT1 A 1 A_SpawnItemEx("NormalMedipackWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-			Stop
+Spawn:
+		TNT1 A 0
+		TNT1 A 1 ACS_NamedExecuteAlways("SmartScavengerHealthScript",0)
+		TNT1 A 10
+		Stop
+SpawnSmartScavGreen:
+		TNT1 A 1 A_SpawnItemEx("SmartMedipackGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
+SpawnSmartScavWhite:
+		TNT1 A 1 A_SpawnItemEx("SmartMedipackWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
+SpawnNormalGreen:
+		TNT1 A 1 A_SpawnItemEx("NormalMedipackGreen",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
+SpawnNormalWhite:
+		TNT1 A 1 A_SpawnItemEx("NormalMedipackWhite",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		Stop
 	}
 }
-
 ACTOR SmartMedipackGreen : SwitchableDecoration
 {
 	+LOOKALLAROUND
@@ -36,19 +35,19 @@ ACTOR SmartMedipackGreen : SwitchableDecoration
 	Radius 5
 	States
 	{
-	Spawn:
+Spawn:
 		MEDP A 1 A_Look
 		Loop
-	Active:
+Active:
 		TNT1 A 0 A_PlaySound("OPENMED")
 		TNT1 A 0 A_Jump(256,"SpawnStims2")
 		Stop
-	See:
+See:
 		TNT1 A 0
 		MEDP A 1 A_JumpIfCloser(36,"CheckWhichPlayer")
 		TNT1 A 0 A_ClearTarget
 		Goto Spawn
-	CheckWhichPlayer:
+CheckWhichPlayer:
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER1) == TRUE, "CheckPlayerHealth1")
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER2) == TRUE, "CheckPlayerHealth2")
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER3) == TRUE, "CheckPlayerHealth3")
@@ -59,51 +58,51 @@ ACTOR SmartMedipackGreen : SwitchableDecoration
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER8) == TRUE, "CheckPlayerHealth8")
 		TNT1 A 0 A_ClearTarget
 		Goto Spawn
-	CheckPlayerHealth1:
+CheckPlayerHealth1:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,0,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,0,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	CheckPlayerHealth2:
+CheckPlayerHealth2:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,1,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,1,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	CheckPlayerHealth3:
+CheckPlayerHealth3:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,2,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,2,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	CheckPlayerHealth4:
+CheckPlayerHealth4:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,3,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,3,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	CheckPlayerHealth5:
+CheckPlayerHealth5:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,4,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,4,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	CheckPlayerHealth6:
+CheckPlayerHealth6:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,5,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,5,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	CheckPlayerHealth7:
+CheckPlayerHealth7:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,6,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,6,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	CheckPlayerHealth8:
+CheckPlayerHealth8:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,7,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,7,0,0), "SpawnStims" )
 		MEDP A 1
 		Goto See
-	SpawnKit:
+SpawnKit:
 		TNT1 A 0 //A_SpawnItemEx("NanoStim",0,0,0,0,0,0,0,0,230)
 		TNT1 A 0 A_SpawnItemEx("NormalMedipackGreen")
 		Stop
-	SpawnStims:
+SpawnStims:
 		TNT1 A 0 A_ChangeFlag("USESPECIAL", 0)
 		TNT1 A 0 A_PlaySound("OPENMED")
 		MEDP B 15
@@ -112,7 +111,7 @@ ACTOR SmartMedipackGreen : SwitchableDecoration
 		TNT1 A 0 ACS_NamedExecuteAlways("SmartScavContainerStay",0)
 		MEDP A 70
 		Goto Fadeout
-	SpawnStims2:
+SpawnStims2:
 		TNT1 A 0 A_ChangeFlag("USESPECIAL", 0)
 		TNT1 A 0 A_PlaySound("OPENMED")
 		MEDP B 15
@@ -120,15 +119,14 @@ ACTOR SmartMedipackGreen : SwitchableDecoration
 		TNT1 A 0 //A_SpawnItemEx("NanoStim",0,0,0,frandom(6,8),0,frandom(6,8),random(0,360),0,205)
 		TNT1 A 0 ACS_NamedExecuteAlways("SmartScavContainerStay",0)
 		MEDP A 70
-	 FadeOut:
+FadeOut:
 		MEDP A 5 A_FadeOut(0.1,1)
 		Loop
-	RemainOpen:
+RemainOpen:
 		MEDP G -1
 		Stop
 	}
 }
-
 ACTOR SmartMedipackWhite : SwitchableDecoration
 {
 	+LOOKALLAROUND
@@ -139,19 +137,19 @@ ACTOR SmartMedipackWhite : SwitchableDecoration
 	Radius 5
 	States
 	{
-	Spawn:
+Spawn:
 		MDPW A 1 A_Look
 		Loop
-	Active:
+Active:
 		TNT1 A 0 A_PlaySound("OPENMED")
 		TNT1 A 0 A_Jump(256,"SpawnStims2")
 		Stop
-	See:
+See:
 		TNT1 A 0
 		MDPW A 1 A_JumpIfCloser(36,"CheckWhichPlayer")
 		TNT1 A 0 A_ClearTarget
 		Goto Spawn
-	CheckWhichPlayer:
+CheckWhichPlayer:
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER1) == TRUE, "CheckPlayerHealth1")
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER2) == TRUE, "CheckPlayerHealth2")
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER3) == TRUE, "CheckPlayerHealth3")
@@ -162,51 +160,51 @@ ACTOR SmartMedipackWhite : SwitchableDecoration
 		TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER8) == TRUE, "CheckPlayerHealth8")
 		TNT1 A 0 A_ClearTarget
 		Goto Spawn
-	CheckPlayerHealth1:
+CheckPlayerHealth1:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,0,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,0,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	CheckPlayerHealth2:
+CheckPlayerHealth2:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,1,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,1,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	CheckPlayerHealth3:
+CheckPlayerHealth3:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,2,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,2,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	CheckPlayerHealth4:
+CheckPlayerHealth4:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,3,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,3,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	CheckPlayerHealth5:
+CheckPlayerHealth5:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,4,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,4,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	CheckPlayerHealth6:
+CheckPlayerHealth6:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,5,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,5,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	CheckPlayerHealth7:
+CheckPlayerHealth7:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,6,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,6,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	CheckPlayerHealth8:
+CheckPlayerHealth8:
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15791,7,0,0), "SpawnKit" )
 		TNT1 A 0 A_JumpIf( ACS_ExecuteWithResult(15792,7,0,0), "SpawnStims" )
 		MDPW A 1
 		Goto See
-	SpawnKit:
+SpawnKit:
 		TNT1 A 0 //A_SpawnItemEx("NanoStim",0,0,0,0,0,0,0,0,230)
 		TNT1 A 0 A_SpawnItemEx("NormalMedipackWhite")
 		Stop
-	SpawnStims:
+SpawnStims:
 		TNT1 A 0 A_ChangeFlag("USESPECIAL", 0)
 		TNT1 A 0 A_PlaySound("OPENMED")
 		MDPW B 15
@@ -214,22 +212,21 @@ ACTOR SmartMedipackWhite : SwitchableDecoration
 		TNT1 A 0 //A_SpawnItemEx("NanoStim",0,0,0,frandom(6,8),0,frandom(6,8),random(0,360),0,205)
 		MDPW A 70
 		TNT1 A 0 A_Jump(256, "FadeOut")
-	SpawnStims2:
+SpawnStims2:
 		TNT1 A 0 A_ChangeFlag("USESPECIAL", 0)
 		TNT1 A 0 A_PlaySound("OPENMED")
 		MDPW B 15
 		MDPW CDEFG 10 A_SpawnItemEx("StimpackWhite",0,0,0,frandom(2,4),0,frandom(2,4),random(0,360))
 		TNT1 A 0 ACS_NamedExecuteAlways("SmartScavContainerStay",0)
 		MDPW A 70
-	 FadeOut:
+FadeOut:
 		MDPW A 5 A_FadeOut(0.1,1)
 		Loop
-	RemainOpen:
+RemainOpen:
 		MDPW G -1
 		Stop		
 	}
 }
-
 ACTOR NormalMedipackGreen : Health
 {
 	Game Doom
@@ -242,12 +239,11 @@ ACTOR NormalMedipackGreen : Health
 	Health.LowMessage 20, "Picked up a medipack that you REALLY need!"
 	States
 	{
-	Spawn:
+Spawn:
 		MEDP A -1
 		Stop
 	}
 }
-
 ACTOR NormalMedipackWhite : Health
 {
 	Game Doom
@@ -260,7 +256,7 @@ ACTOR NormalMedipackWhite : Health
 	Health.LowMessage 20, "Picked up a medipack that you REALLY need!"
 	States
 	{
-	Spawn:
+Spawn:
 		MDPW A -1
 		Stop
 	}

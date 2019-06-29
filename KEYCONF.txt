@@ -1,9 +1,60 @@
+clearplayerclasses
+addplayerclass BrutalDoomer
+addplayerclass Purist
+addplayerclass Traditional
+addplayerclass BrutalDoomerPistolStart nomenu
+addkeysection "BrutalDoom - Advanced Movements" BrutalDoomActions               // the last unquoted bit used to say MySampleKeysection
+addmenukey "Kick" kickem
+alias kickem "puke 301"
+defaultbind Q kickem
+addmenukey "Reload" reload
+alias reload "puke 303"
+defaultbind R reload
+alias reloader "reload"
+addmenukey "Unload Gun" unreloader
+alias unreloader "puke 363"
+defaultbind U unreloader
+addmenukey "Roll Left" roleft
+alias roleft "puke 306"
+defaultbind Z roleft
+addmenukey "Roll Right" roright
+alias roright "puke 307"
+defaultbind C roright
+addkeysection "Brutal Doom - Interactions" BrutalDoomInteractions               // here too
+addmenukey "Offend" brutaltaunt
+alias brutaltaunt "puke 302"
+defaultbind H brutaltaunt
+addmenukey "Wave(1)" wave1
+alias wave1 "puke 431"
+defaultbind V wave1
+addmenukey "Wave(2)" wave2
+alias wave2 "puke 432"
+defaultbind X wave2
+addmenukey "Advanced Taunt" advtaunt
+alias advtaunt "puke 304"
+defaultbind J advtaunt
+addmenukey "One-Liners" oneliner
+alias oneliner "puke 305"
+defaultbind K oneliner
+addkeysection "Project Brutality" BrutalDoomAdvMoves              // here too
+AddMenuKey "Dual Wield/Weapon Special" dual
+Alias dual "puke 3756"
+DefaultBind V dual
+Alias weaponspecial "dual"
+AddMenuKey "Activate Equipment" grenadetoss
+Alias grenadetoss "pukename EquipmentHotkey"
+DefaultBind G grenadetoss
+Alias usegren "grenadetoss"
+AddMenuKey "Toggle Equipment" usemine
+Alias usemine "pukename ToggleEquipmentHotkey"
+DefaultBind H usemine
+AddMenuKey "Quick Melee/Combo" punchem
+Alias punchem "puke 3757"
+DefaultBind F punchem
 addkeysection "Parkmore" Parkmore
-
 addmenukey "ZDoom centerview" pcenterview
 addmenukey "Parkmore turn180" pturn180
 addmenukey "Toggle Parkmore"  ptoggle
-
 alias pturn180 "puke -385 180 2"
 alias pcenterview "puke -388 0"
 alias ptoggle "puke -375"

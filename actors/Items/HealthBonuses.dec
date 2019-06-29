@@ -13,12 +13,11 @@ ACTOR HealthPlus : healthbonus
 	Health.LowMessage 25, "That's not enough health to manage."
 	states
 	{
-	spawn:
-	BONU ABCDEFGFEDCB 3
-	loop
+spawn:
+		BONU ABCDEFGFEDCB 3
+		loop
 	}
 }
-
 ACTOR StrongHealthPlus : Health
 {
 	Game Doom
@@ -33,12 +32,11 @@ ACTOR StrongHealthPlus : Health
 	Health.LowMessage 25, "That amount of health won't cut it."
 	States
 	{
-	    Spawn:
+Spawn:
 		SBON ABCDEFGFEDCB 3
 		loop
 	}
 }
-
 ACTOR SuperHealthPlus : Health
 {
 	Game Doom
@@ -53,12 +51,11 @@ ACTOR SuperHealthPlus : Health
 	Health.LowMessage 25, "Some good health, but not good enough."
 	States
 	{
-	    Spawn:
+Spawn:
 		SBNU ABCDEFGFEDCB 3
 		loop
 	}
 }
-
 ACTOR HealthInfusionT1 : Health
 {
 	Game Doom
@@ -66,9 +63,7 @@ ACTOR HealthInfusionT1 : Health
 	Inventory.MaxAmount 9999
 	Health.LowMessage 25, "Desparate times call for desperate measures. Get some Health!"
 }
-
 // Carryable Health Bonuses --------------------------------------------------------------
-
 ACTOR HealthInfusionKitT1 : CustomInventory
 {
 	Tag "Armor Reinforcement Kit - Adds 50 Armor points to current armor."
@@ -85,17 +80,16 @@ ACTOR HealthInfusionKitT1 : CustomInventory
 	Inventory.Icon "IB1ME0"
 	States
 	{
-	Spawn:
+Spawn:
 		IB1M ABCDCB 4
 		Loop
-	Use:
+Use:
 		TNT1 A 0 A_GiveInventory("HealthInfusionT1", 1)
 		TNT1 A 20
 		TNT1 A 0 A_Print ("5 Health points infused.")
 		Stop
-      } 
+	} 
 }
-
 ACTOR HealthInfusionT2 : Health
 {
 	Game Doom
@@ -103,8 +97,6 @@ ACTOR HealthInfusionT2 : Health
 	Inventory.MaxAmount 9999
 	Health.LowMessage 25, "Desparate times call for desperate measures. Get some Health!"
 }
-
-
 ACTOR HealthInfusionKitT2 : CustomInventory
 {
 	Tag "Armor Reinforcement Kit - Adds 50 Armor points to current armor."
@@ -121,17 +113,16 @@ ACTOR HealthInfusionKitT2 : CustomInventory
 	Inventory.Icon "IB2ME0"
 	States
 	{
-	Spawn:
+Spawn:
 		IB2M ABCDCB 4
 		Loop
-	Use:
+Use:
 		TNT1 A 0 A_GiveInventory("HealthInfusionT2", 1)
 		TNT1 A 20
 		TNT1 A 0 A_Print ("10 Health points infused.")
 		Stop
-      } 
+	} 
 }
-
 ACTOR HealthInfusionT3 : Health
 {
 	Game Doom
@@ -139,8 +130,6 @@ ACTOR HealthInfusionT3 : Health
 	Inventory.MaxAmount 9999
 	Health.LowMessage 25, "Desparate times call for desperate measures. Get some Health!"
 }
-
-
 ACTOR HealthInfusionKitT3 : CustomInventory
 {
 	Tag "Armor Reinforcement Kit - Adds 50 Armor points to current armor."
@@ -157,13 +146,13 @@ ACTOR HealthInfusionKitT3 : CustomInventory
 	Inventory.Icon "IB3ME0"
 	States
 	{
-	Spawn:
+Spawn:
 		IB3M ABCDCB 4
 		Loop
-	Use:
+Use:
 		TNT1 A 0 A_GiveInventory("HealthInfusionT3", 1)
 		TNT1 A 20
 		TNT1 A 0 A_Print ("15 Health points infused.")
 		Stop
-      } 
+	} 
 }

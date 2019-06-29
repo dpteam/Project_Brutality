@@ -1,9 +1,7 @@
-
 void main()
 {
 	vec4 C	;
 	int i ;
-	
 	if( blendmode == 1 )
 	{
 		for( i = 0; i < samples; i++ )
@@ -18,6 +16,5 @@ void main()
 			C.rgb += texture( InputTexture, TexCoord + steps * i ).rgb * increment ;
 		}
 	}
-	
 	FragColor = C ;
 }

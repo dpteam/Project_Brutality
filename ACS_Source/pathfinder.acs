@@ -1,0 +1,7 @@
+#library "pathfinder"
+#include "zcommon.acs"
+
+script 634 (void)
+{
+	Thing_Hate(98, 0, 0);
+}

@@ -1,5 +1,4 @@
 // Shadow -- by Vader
-
 ACTOR Shadow
 {
 	SpawnID 2510
@@ -23,8 +22,8 @@ ACTOR Shadow
 	MissileType ShadowBall
 	States
 	{
-	Spawn:
-	See:
+Spawn:
+See:
 		SHDW A 15
 		SHDW AAA 1 A_Chase
 		SHDW A 0 A_SpawnItemEx("ShadowGhostA", 0, 0, 0, 0, 0, 0, 0, 128)
@@ -43,7 +42,7 @@ ACTOR Shadow
 		SHDW DDD 1 A_Chase
 		SHDW D 0 A_SpawnItemEx("ShadowGhostD", 0, 0, 0, 0, 0, 0, 0, 128)
 		Goto See+1
-	Missile:
+Missile:
 		SHDW E 30 A_FaceTarget
 		SHDW F 5 
 		SHDW G 5 BRIGHT A_MissileAttack
@@ -51,12 +50,11 @@ ACTOR Shadow
 		SHDW E 20
 		SHDW E 1 A_SpidRefire
 		Goto Missile+1      
-	Pain:
+Pain:
 		SHDW H 4
 		SHDW H 4 A_Pain
 		Goto See+1
-	
-	Pain.Stun:
+		Pain.Stun:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx ("StunElectrocute", random (-4, 4), random (-4, 4),  random (16, 32), 0, 0)
 		SHDW H 1 A_Pain
@@ -71,34 +69,30 @@ ACTOR Shadow
 		SHDW H 3 A_SpawnItemEx ("StunElectrocute", random (-12, 12), random (-12, 12),  random (16, 52), 0, 0)
 		SHDW G 1 A_Pain
 		Goto See
-	
-	Possession:
+Possession:
 		TNT1 A 0 A_SetInvulnerable
 		SHDW H 3
 		SHDW H 3 A_Pain
 		"####" "#" 35 ACS_NamedExecuteAlways("Pos - Flicker effect")
 		TNT1 A 0 A_UnSetInvulnerable
 		Goto See
-		
-	
-	
-	Death:
-	XDeath:
+Death:
+XDeath:
 		TNT1 AA 0 A_CustomMissile ("BigNeoSmoke", 10, 0, random (0, 360), 2, random (0, 360))
-        TNT1 AA 0 A_CustomMissile ("ExplosionSmoke", 22, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AA 0 A_CustomMissile ("ExplosionSmoke", 22, 0, random (0, 360), 2, random (0, 360))
 		SHDX A 4 A_CustomMissile ("ExplosionSmokeFast22", 22, 0, random (0, 360), 2, random (0, 360))
 		SHDX B 4 A_Scream
 		SHDX C 3 A_CustomMissile ("ExplosionSmokeFast22", 16, 0, random (0, 360), 2, random (0, 360))
 		SHDX D 3 A_Fall
- 		SHDX E 3 A_CustomMissile ("ExplosionSmokeFast22", 8, 0, random (0, 360), 2, random (0, 360))
- 		SHDX F 3 A_CustomMissile ("ExplosionSmokeFast22", 4, 0, random (0, 360), 2, random (0, 360))
+		SHDX E 3 A_CustomMissile ("ExplosionSmokeFast22", 8, 0, random (0, 360), 2, random (0, 360))
+		SHDX F 3 A_CustomMissile ("ExplosionSmokeFast22", 4, 0, random (0, 360), 2, random (0, 360))
 		SHDX GGGGG 1 A_FadeOut(0.2)
 		Stop
-	Raise:
+Raise:
 		SHDW M 8
 		SHDW KLJI 8
 		Goto See
-	Burn:
+Burn:
 		BURN A 3 Bright A_PlaySound("misc/burn", CHAN_AUTO)
 		BURN B 3 Bright A_Scream
 		BURN C 3 Bright A_PlaySound("misc/flame", CHAN_AUTO)
@@ -110,7 +104,6 @@ ACTOR Shadow
 		Stop
 	}
 }
-
 ACTOR ShadowBall
 {
 	Radius 6
@@ -127,16 +120,15 @@ ACTOR ShadowBall
 	Damagetype "Plasma"
 	States
 	{
-	Spawn: 
+Spawn: 
 		SBAL ABC 4 BRIGHT A_SpawnItemEx("ShadowTrail", 0, 0, 0, 0, 0, 0, 0, 128)
 		Loop
-	Death:
+Death:
 		SBAL C 5 Bright
 		SBAL DEFGH 4 BRIGHT
 		Stop
 	}
 }
-
 ACTOR ShadowGhostA
 {
 	Radius 4
@@ -149,42 +141,38 @@ ACTOR ShadowGhostA
 	PROJECTILE
 	States
 	{
-	Spawn:
+Spawn:
 		TROX A 10
 		Stop
 	}
 }
-
 ACTOR ShadowGhostB : ShadowGhostA
 {
 	States
 	{
-	Spawn:
+Spawn:
 		SHDX B 10
 		Stop
 	}
 }
-
 ACTOR ShadowGhostC : ShadowGhostA
 {
 	States
 	{
-	Spawn:
+Spawn:
 		SHDX C 10
 		Stop
 	}
 }
-
 ACTOR ShadowGhostD : ShadowGhostA
 {
 	States
 	{
-	Spawn:
+Spawn:
 		SHDX D 10
 		Stop
 	}
 }
-
 ACTOR Shadowtorso
 {
 	Radius 12
@@ -194,39 +182,35 @@ ACTOR Shadowtorso
 	RenderStyle "Translucent"
 	alpha 0.7
 	+Doombounce
-      States
+	States
 	{
-	Spawn:
-         SHDW QRS 5
-         SHDW T 5 A_Fall
-         SHDW U 5
-         SHDW V -1
-         Stop
+Spawn:
+		SHDW QRS 5
+		SHDW T 5 A_Fall
+		SHDW U 5
+		SHDW V -1
+		Stop
 	}
 }
-
 actor ShadowTrail
 {
-    Radius 1
-    Height 1
-    Speed 0
-    PROJECTILE
-    RENDERSTYLE ADD
-    ALPHA 0.6
-    +NOCLIP
-    States
-    {
-    Spawn:
-     SHTR ABCDEF 4 Bright
-        Stop       
-    }
+	Radius 1
+	Height 1
+	Speed 0
+	PROJECTILE
+	RENDERSTYLE ADD
+	ALPHA 0.6
+	+NOCLIP
+	States
+	{
+Spawn:
+		SHTR ABCDEF 4 Bright
+		Stop       
+	}
 }
-
-
 // Flesh Spawn -- by Vader
 // Edited a bit by Xaser -- lowered health so it works as a weak swarm enemy
 // similar to Halo's flood spore things.
-
 ACTOR Fleshspawn
 {
 	//$Category Monsters
@@ -255,19 +239,19 @@ ACTOR Fleshspawn
 	+NOTARGET
 	States
 	{
-	Spawn:
+Spawn:
 		FLSP AB 8 A_Look
 		loop
-	See:
+See:
 		FLSP AABB 2 A_Chase
 		loop
-	Missile:
+Missile:
 		FLSP C 0 A_Jump(128,"Charge")
 		FLSP C 8 A_FaceTarget
 		FLSP G 4 A_FaceTarget    
 		FLSP H 4 Bright A_CustomMissile("Fleshspawnball", 12, 0, 0) 
 		goto See
-	Charge:
+Charge:
 		FLSP C 0 A_Jump(96, 6)
 		FLSP C 8 A_FaceTarget
 		FLSP D 4 A_FaceTarget    
@@ -283,11 +267,11 @@ ACTOR Fleshspawn
 		FLSP E 4 A_SkullAttack
 		FLSP FE 4
 		Goto Charge+4
-	Pain:
+Pain:
 		FLSP I 3 
 		FLSP I 3 A_Pain
 		Goto See
-	Death:
+Death:
 		TNT1 AA 0 A_CustomMissile ("Blue_FlyingBlood", 0, 0, random (0, 360), 2, random (30, 150))
 		FLSP I 5
 		FLSP J 5 A_Scream
@@ -296,7 +280,7 @@ ACTOR Fleshspawn
 		FLSP MN 5 A_SetFloorClip
 		FLSP O -1 
 		Stop
-	XDeath:
+XDeath:
 		FLSP P 3 
 		TNT1 AAAAA 0 A_CustomMissile ("Blue_FlyingBlood", 0, 0, random (0, 360), 2, random (30, 150))
 		FLSP Q 0 A_FaceTarget
@@ -314,7 +298,7 @@ ACTOR Fleshspawn
 		FLSP R 3 A_NoBlocking  
 		FLSP STU 3
 		Stop
-	Raise:
+Raise:
 		FLSP O 5 A_UnSetFloorClip
 		FLSP NMLKJI 5
 		Goto See
@@ -325,22 +309,21 @@ ACTOR FleshSpawnSummoned : FleshSpawn
 	var int user_summoned;
 	States
 	{
-	Spawn:
+Spawn:
 		FLSP A 0 A_JumpIf(user_summoned == 1, "Idle")
 		FLSP A 0 A_SetUserVar("user_summoned", 1)
 		Goto Charge
-	Idle:
+Idle:
 		FLSP AB 8 A_Look
 		loop
 	}
 }
-
 ACTOR FleshSpawnGibs
 {
 	+NoClip
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_CustomMissile("Fleshspawngib1", 14, 0, random(-180,180), 2, random(10,40))
 		TNT1 A 0 A_CustomMissile("Fleshspawngib2", 6, 2, random(-180,180), 2, random(0,25))
@@ -354,7 +337,6 @@ ACTOR FleshSpawnGibs
 		Stop
 	}
 }
-
 ACTOR Fleshspawnball
 {
 	Damage 2
@@ -368,15 +350,14 @@ ACTOR Fleshspawnball
 	Projectile
 	states
 	{
-	Spawn:
+Spawn:
 		FLBL ABCBABCBABCBABCBIJKLM 4 Bright
 		Stop
-	Death:
+Death:
 		FLBL DEFGH 4 Bright
 		Stop
 	}
 }
-
 ACTOR Fleshspawngib1
 {
 	Speed 8
@@ -388,15 +369,14 @@ ACTOR Fleshspawngib1
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB1 ABCD 4 
 		loop
-	Death:
+Death:
 		FGB1 E -1
 		stop        
 	}
 }
-
 ACTOR Fleshspawngib2
 {
 	Speed 8
@@ -408,15 +388,14 @@ ACTOR Fleshspawngib2
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB2 ABCD 4 
 		loop
-	Death:
+Death:
 		FGB2 I -1
 		stop        
 	}
 }
-
 ACTOR Fleshspawngib2B
 {
 	Speed 8
@@ -428,15 +407,14 @@ ACTOR Fleshspawngib2B
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB2 EFGH 4 
 		loop
-	Death:
+Death:
 		FGB2 J -1
 		stop        
 	}
 }
-
 ACTOR Fleshspawngib3
 {
 	Speed 8
@@ -448,15 +426,14 @@ ACTOR Fleshspawngib3
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB3 ABCD 4 
 		loop
-	Death:
+Death:
 		FGB3 E -1
 		stop        
 	}
 }
-
 ACTOR Fleshspawngib4
 {
 	Speed 8
@@ -468,15 +445,14 @@ ACTOR Fleshspawngib4
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB4 ABCD 4 
 		loop
-	Death:
+Death:
 		FGB4 I -1
 		stop        
 	}
 }
-
 ACTOR Fleshspawngib4B
 {
 	Speed 8
@@ -489,15 +465,14 @@ ACTOR Fleshspawngib4B
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB4 EFGH 4 
 		loop
-	Death:
+Death:
 		FGB4 J -1
 		stop        
 	}
 }
-
 ACTOR Fleshspawngib5
 {
 	Speed 8
@@ -509,15 +484,14 @@ ACTOR Fleshspawngib5
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB5 ABCD 4 
 		loop
-	Death:
+Death:
 		FGB5 E -1
 		stop        
 	}
 }
-
 ACTOR Fleshspawngib6
 {
 	Speed 0
@@ -529,13 +503,12 @@ ACTOR Fleshspawngib6
 	+DROPOFF
 	States
 	{
-	Spawn:
+Spawn:
 		FGB6 A 4 
 		loop
-	Death:
+Death:
 		FGB6 BC 4
 		FGB6 D -1
 		stop        
 	}
 }
-

@@ -16,13 +16,12 @@ actor ArmorShard : armorbonus
 	Inventory.PickUpSound "misc/bonus_PickUp"
 	States
 	{
-	spawn: 
-	TNT1 A 0
-	HELB ABCDEFGHGFEDCB 3 
-	loop
+spawn: 
+		TNT1 A 0
+		HELB ABCDEFGHGFEDCB 3 
+		loop
 	}
 }
-
 Actor StrongArmorShard : BasicArmorBonus
 {
 	Game Doom
@@ -40,12 +39,11 @@ Actor StrongArmorShard : BasicArmorBonus
 	Inventory.Icon "BON4A0"
 	States
 	{
-		Spawn:
+Spawn:
 		BON4 ABCDCB 6
 		loop
 	}
 }
-
 actor SuperArmorBonus : BasicArmorBonus
 {
 	Game Doom
@@ -61,14 +59,12 @@ actor SuperArmorBonus : BasicArmorBonus
 	Inventory.Icon "BON6A0"
 	States
 	{
-	Spawn:
+Spawn:
 		BON6 ABCDCB 6
 		Loop
 	}
 }
-
 // Zombie bonus --------------------------------------------------------------
-
 actor ZombieHelmet : armorbonus
 {
 	Game Doom
@@ -87,9 +83,9 @@ actor ZombieHelmet : armorbonus
 	Inventory.PickUpSound "misc/bonus_PickUp"
 	States
 	{
-	spawn: 
-	TNT1 A 0
-	DGVB ABCDCB 3
-	loop
+spawn: 
+		TNT1 A 0
+		DGVB ABCDCB 3
+		loop
 	}
 }

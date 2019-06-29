@@ -1,4 +1,3 @@
-
 ACTOR TNTMap01DecorationSpawn
 {
 	+THRUACTORS
@@ -7,34 +6,31 @@ ACTOR TNTMap01DecorationSpawn
 	Radius 1
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-  TNT1 A 0 ACS_ExecuteALways(261)
-  TNT1 A 0 A_SpawnItemEx("BDECgrassSpawner", 640, 992, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECgrassSpawner", 496, 592, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECgrassSpawner", 448, 416, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECBush", 320, 608, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECLightPost", 384, 160, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECLightPost", 672, 352, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECLightPost", 720, 608, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECLightPost", 784, 1120, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-  TNT1 A 0 A_SpawnItemEx("BDECLightPost", 448, 1344, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -256, -96, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -192, 352, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", 160, 456, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -288, 1120, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -288, 1312, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	TNT1 A 0 A_SpawnItemEx("BDECAntenna1", 424, 540, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	TNT1 A 0 A_SpawnItemEx("BDECDestroyableWindowAdd3", -60, 412, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-	 TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(261)
+		TNT1 A 0 A_SpawnItemEx("BDECgrassSpawner", 640, 992, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECgrassSpawner", 496, 592, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECgrassSpawner", 448, 416, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECBush", 320, 608, -999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECLightPost", 384, 160, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECLightPost", 672, 352, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECLightPost", 720, 608, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECLightPost", 784, 1120, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECLightPost", 448, 1344, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -256, -96, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -192, 352, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", 160, 456, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -288, 1120, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp", -288, 1312, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECAntenna1", 424, 540, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECDestroyableWindowAdd3", -60, 412, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap02DecorationSpawn
 {
 	+THRUACTORS
@@ -43,20 +39,15 @@ ACTOR TNTMap02DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
+	States
+	{
+Spawn:
+		TNT1 A 0
 		TNT1 A 0 ACS_ExecuteALways(262)
-			TNT1 A 1
-			Stop
-			}
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
-
-
 ACTOR TNTMap03DecorationSpawn
 {
 	+THRUACTORS
@@ -65,19 +56,15 @@ ACTOR TNTMap03DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
+	States
+	{
+Spawn:
+		TNT1 A 0
 		TNT1 A 0 ACS_ExecuteALways(263)
-			TNT1 A 1
-			Stop
-			}
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
-
 ACTOR TNTMap04DecorationSpawn
 {
 	+THRUACTORS
@@ -86,19 +73,15 @@ ACTOR TNTMap04DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(264)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(264)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
-
 ACTOR TNTMap05DecorationSpawn
 {
 	+THRUACTORS
@@ -107,26 +90,23 @@ ACTOR TNTMap05DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(265)
-			TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1280, 672, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1280, -96, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1664, -96, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1664, 672, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1664, 256, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1280, 256, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 0 A_SpawnItemEx("BDECUacShip", 1408, 32, -999, 0, 0, 0, 90, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 0 A_SpawnItemEx("BDECUacShip", 1408, 736, -999, 0, 0, 0, 90, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(265)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1280, 672, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1280, -96, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1664, -96, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1664, 672, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1664, 256, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECIndustrialLamp2", 1280, 256, 999, 0, 0, 0, 0, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECUacShip", 1408, 32, -999, 0, 0, 0, 90, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("BDECUacShip", 1408, 736, -999, 0, 0, 0, 90, SXF_ABSOLUTEPOSITION | SXF_NOCHECKPOSITION)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap06DecorationSpawn
 {
 	+THRUACTORS
@@ -135,18 +115,15 @@ ACTOR TNTMap06DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(266)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(266)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap07DecorationSpawn
 {
 	+THRUACTORS
@@ -155,18 +132,15 @@ ACTOR TNTMap07DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(267)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(267)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap08DecorationSpawn
 {
 	+THRUACTORS
@@ -175,18 +149,15 @@ ACTOR TNTMap08DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(268)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(268)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap09DecorationSpawn
 {
 	+THRUACTORS
@@ -195,18 +166,15 @@ ACTOR TNTMap09DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(261)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(261)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap10DecorationSpawn
 {
 	+THRUACTORS
@@ -215,18 +183,15 @@ ACTOR TNTMap10DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(270)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(270)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap11DecorationSpawn
 {
 	+THRUACTORS
@@ -235,18 +200,15 @@ ACTOR TNTMap11DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(271)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(271)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap12DecorationSpawn
 {
 	+THRUACTORS
@@ -255,18 +217,15 @@ ACTOR TNTMap12DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(272)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(272)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap13DecorationSpawn
 {
 	+THRUACTORS
@@ -275,18 +234,15 @@ ACTOR TNTMap13DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(273)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(273)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap14DecorationSpawn
 {
 	+THRUACTORS
@@ -295,17 +251,15 @@ ACTOR TNTMap14DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(274)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(274)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap15DecorationSpawn
 {
 	+THRUACTORS
@@ -314,18 +268,15 @@ ACTOR TNTMap15DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(275)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(275)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap16DecorationSpawn
 {
 	+THRUACTORS
@@ -334,17 +285,15 @@ ACTOR TNTMap16DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(276)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(276)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap17DecorationSpawn
 {
 	+THRUACTORS
@@ -353,17 +302,15 @@ ACTOR TNTMap17DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(277)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(277)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap18DecorationSpawn
 {
 	+THRUACTORS
@@ -372,17 +319,15 @@ ACTOR TNTMap18DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(278)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(278)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap19DecorationSpawn
 {
 	+THRUACTORS
@@ -391,17 +336,15 @@ ACTOR TNTMap19DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(279)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(279)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap20DecorationSpawn
 {
 	+THRUACTORS
@@ -410,17 +353,15 @@ ACTOR TNTMap20DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(280)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(280)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap21DecorationSpawn
 {
 	+THRUACTORS
@@ -429,17 +370,15 @@ ACTOR TNTMap21DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(281)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(281)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap22DecorationSpawn
 {
 	+THRUACTORS
@@ -448,18 +387,15 @@ ACTOR TNTMap22DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(282)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(282)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap23DecorationSpawn
 {
 	+THRUACTORS
@@ -468,18 +404,15 @@ ACTOR TNTMap23DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(283)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(283)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap24DecorationSpawn
 {
 	+THRUACTORS
@@ -488,18 +421,15 @@ ACTOR TNTMap24DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(284)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(284)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
-
 ACTOR TNTMap25DecorationSpawn
 {
 	+THRUACTORS
@@ -508,17 +438,15 @@ ACTOR TNTMap25DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(285)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(285)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap26DecorationSpawn
 {
 	+THRUACTORS
@@ -527,17 +455,15 @@ ACTOR TNTMap26DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(286)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(286)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap27DecorationSpawn
 {
 	+THRUACTORS
@@ -546,17 +472,15 @@ ACTOR TNTMap27DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(287)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(287)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap28DecorationSpawn
 {
 	+THRUACTORS
@@ -565,17 +489,15 @@ ACTOR TNTMap28DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(288)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(288)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap29DecorationSpawn
 {
 	+THRUACTORS
@@ -584,17 +506,15 @@ ACTOR TNTMap29DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(289)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(289)
+		TNT1 A 1
+		Stop
+	}
 }
-
-
 ACTOR TNTMap30DecorationSpawn
 {
 	+THRUACTORS
@@ -603,12 +523,12 @@ ACTOR TNTMap30DecorationSpawn
 	Radius 0
 	Height 1
 	Scale 1.0
-		States
-		{
-		Spawn:
-			TNT1 A 0
-			TNT1 A 0 ACS_ExecuteALways(290)
-			TNT1 A 1
-			Stop
-			}
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 ACS_ExecuteALways(290)
+		TNT1 A 1
+		Stop
+	}
 }

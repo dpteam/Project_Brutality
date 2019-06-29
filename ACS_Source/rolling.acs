@@ -1,0 +1,12 @@
+#library "rolling"
+#include "zcommon.acs"
+
+script 306 (void) NET
+{
+	GiveInventory("rollleft", 1);
+}
+
+script 307 (void) NET
+{
+	GiveInventory("rollright", 1);
+}

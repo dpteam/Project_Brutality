@@ -11,30 +11,30 @@ ACTOR ClassicFist : Weapon
 	+WEAPON.NOAUTOAIM
 	States
 	{
-	Ready:
-	    TNT1 A 0 A_TakeInventory("Rifle")
+Ready:
+		TNT1 A 0 A_TakeInventory("Rifle")
 		TNT1 A 0 A_TakeInventory("DualRifles")
 		PKFS A 1 A_WeaponReady
 		TNT1 A 0 A_TakeInventory("Rifle")
 		TNT1 A 0 A_TakeInventory("DualRifles")
 		Loop
-	Deselect:
+Deselect:
 		PKFS A 1 A_Lower
 		TNT1 A 0 A_TakeInventory("Rifle")
 		TNT1 A 0 A_TakeInventory("DualRifles")
 		Loop
-	Select:
+Select:
 		PKFS A 1 A_Raise
 		Loop
-	Fire:
-	    TNT1 A 0 A_jumpifinventory("PowerStrength",1,"Fire2")
+Fire:
+		TNT1 A 0 A_jumpifinventory("PowerStrength",1,"Fire2")
 		PKFS B 1 A_Giveinventory("Punching",1)
 		TNT1 A 0 A_PlaySound("skeleton/swing")
 		PKFS CD 1
 		PKFS E 2 A_FireCustomMissile("MeleeStrike2", 0, 0, 0, -5)
 		PKFS FGHIJKL 2
 		Goto Ready
-	Fire2:
+Fire2:
 		PKFS B 1 A_Giveinventory("Punching",1)
 		TNT1 A 0 A_PlaySound("weapons/gswing")
 		PKFS CD 1
@@ -43,10 +43,6 @@ ACTOR ClassicFist : Weapon
 		Goto Ready	
 	}
 }
-
-
-
-
 ACTOR ClassicPistol : DoomWeapon
 {
 	Game Doom
@@ -62,27 +58,27 @@ ACTOR ClassicPistol : DoomWeapon
 	Tag "$TAG_PISTOL"
 	States
 	{
-	Ready:
-	    TNT1 A 0 A_TakeInventory("Rifle")
+Ready:
+		TNT1 A 0 A_TakeInventory("Rifle")
 		TNT1 A 0 A_TakeInventory("DualRifles")
 		PKPI A 1 A_WeaponReady
 		TNT1 A 0 A_TakeInventory("Rifle")
 		TNT1 A 0 A_TakeInventory("DualRifles")
 		Loop
-	Deselect:
+Deselect:
 		PKPI A 1 A_Lower
 		TNT1 A 0 A_TakeInventory("Rifle")
 		TNT1 A 0 A_TakeInventory("DualRifles")
 		Loop
-	Select:
+Select:
 		PKPI A 1 A_Raise
 		Loop
-	Fire:
+Fire:
 		TNT1 A 0 A_FireBullets (3, 1, 1, 9, "HitPuff")
 		TNT1 A 0 A_PlaySound("weapons/rifle")
 		RIFF A 0 A_FireCustomMissile("Tracer", random(-2,2), 0, -1, 0)
 		TNT1 A 0 A_SetPitch(-1.0 + pitch)
-        PKPI F 1 BRIGHT
+		PKPI F 1 BRIGHT
 		PKPI CDE 1 A_SetPitch(0.25 + pitch)
 		TNT1 A 0 A_FireCustomMissile("RifleCaseSpawn",5,0,8,-9)
 		PKPI DC 1
@@ -90,15 +86,11 @@ ACTOR ClassicPistol : DoomWeapon
 		PKPI A 5 A_WeaponReady(1)
 		TNT1 A 0 A_ReFire
 		Goto Ready
- 	Spawn:
+Spawn:
 		PIST A -1
 		Stop
 	}
 }
-
-
-
-
 ACTOR ClassicShotgun : DoomWeapon
 {
 	Game Doom
@@ -113,21 +105,21 @@ ACTOR ClassicShotgun : DoomWeapon
 	Tag "$TAG_SHOTGUN"
 	States
 	{
-	Ready:
-	    TNT1 A 0 A_TakeInventory("Shot_gun")
+Ready:
+		TNT1 A 0 A_TakeInventory("Shot_gun")
 		PKSG A 1 A_WeaponReady
 		TNT1 A 0 A_TakeInventory("Shot_gun")
 		Loop
-	Deselect:
-	    TNT1 A 0 A_TakeInventory("Shot_gun")
+Deselect:
+		TNT1 A 0 A_TakeInventory("Shot_gun")
 		PKSG A 1 A_Lower
 		TNT1 A 0 A_TakeInventory("Shot_gun")
 		Loop
-	Select:
+Select:
 		PKSG A 1 A_Raise
 		TNT1 A 0 A_TakeInventory("Shot_gun")
 		Loop
-	Fire:
+Fire:
 		PKSG A 1
 		TNT1 AAAAAAA 0 A_FireCustomMissile("Tracer", random(-5,5),0,-1,-12,0,random(-1,1))
 		TNT1 A 0 A_FireBullets (5.0, 1.0, 7, 8, "ShotgunPuff")
@@ -144,15 +136,11 @@ ACTOR ClassicShotgun : DoomWeapon
 		TNT1 A 0 A_Refire
 		PKSG A 10 A_WeaponReady
 		Goto Ready
-	Spawn:
+Spawn:
 		SHOT A -1
 		Stop
 	}
 }	
-
-
-
-
 ACTOR ClassicSSG : DoomWeapon
 {
 	Game Doom
@@ -168,19 +156,19 @@ ACTOR ClassicSSG : DoomWeapon
 	+WEAPON.NOAUTOAIM
 	States
 	{
-	Ready:
-	    TNT1 A 0 A_TakeInventory("SSG")
+Ready:
+		TNT1 A 0 A_TakeInventory("SSG")
 		PKSS A 1 A_WeaponReady
 		TNT1 A 0 A_TakeInventory("SSG")
 		Loop
-	Deselect:
+Deselect:
 		PKSS A 1 A_Lower
 		Loop
-	Select:
+Select:
 		PKSS A 1 A_Raise
 		Loop
-	Fire:
-	    PKSS A 1
+Fire:
+		PKSS A 1
 		TNT1 A 0 A_firebullets (0,0,1,15,"shotpuff",0,180)
 		TNT1 AAAAAAAAAAAAAA 0 A_FireCustomMissile("Tracer", random(-10,10),0,-1,-12,0,random(-3,3))
 		TNT1 A 0 A_FireBullets (10.0, 3.0, 14, 8, "ShotgunPuff")
@@ -206,15 +194,11 @@ ACTOR ClassicSSG : DoomWeapon
 		PKSS A 5
 		TNT1 A 0 A_Refire
 		Goto Ready
-	Spawn:
+Spawn:
 		SGN2 A -1
 		Stop
 	}
 }
-
-
-
-
 ACTOR ClassicChaingun : DoomWeapon
 {
 	Game Doom
@@ -229,49 +213,44 @@ ACTOR ClassicChaingun : DoomWeapon
 	Tag "$TAG_CHAINGUN"
 	States
 	{
-	Ready:
-	    TNT1 A 0 A_TakeInventory("Mini_gun")
+Ready:
+		TNT1 A 0 A_TakeInventory("Mini_gun")
 		PKCG A 1 A_WeaponReady
 		TNT1 A 0 A_TakeInventory("Mini_gun")
 		Loop
-	Deselect:
+Deselect:
 		PKCG A 1 A_Lower
 		Loop
-	Select:
-	    TNT1 A 0 A_TakeInventory("Mini_gun")
+Select:
+		TNT1 A 0 A_TakeInventory("Mini_gun")
 		PKCG A 1 A_Raise
 		TNT1 A 0 A_TakeInventory("Mini_gun")
 		Loop
-	Fire:
+Fire:
 		TNT1 A 0 BRIGHT A_FireBullets (5, 1, 1, 8, "MachineGunBulletPuff")
-        TNT1 A 0 A_FireCustomMissile("Tracer", random(-3,3), 0, -1, -12, 0, random(-3,3))
+		TNT1 A 0 A_FireCustomMissile("Tracer", random(-3,3), 0, -1, -12, 0, random(-3,3))
 		TNT1 A 0 A_PlaySound("CHGNSHOT", 1)
 		TNT1 A 0 A_FireCustomMissile("RifleCaseSpawn",5,0,6,-6)
 		PKCG F 1 BRIGHT 
 		TNT1 A 0 A_SetPitch(-1.0 + pitch)
 		PKCG B 1 A_SpawnItemEx("PlayerMuzzle1",30,5,30)
 		PKCG CD 1 A_SetPitch(0.5 + pitch)
-		
-		
 		TNT1 A 0 BRIGHT A_FireBullets (5, 1, 1, 8, "MachineGunBulletPuff")
-        TNT1 A 0 A_FireCustomMissile("Tracer", random(-3,3), 0, -1, -12, 0, random(-3,3))
+		TNT1 A 0 A_FireCustomMissile("Tracer", random(-3,3), 0, -1, -12, 0, random(-3,3))
 		TNT1 A 0 A_PlaySound("CHGNSHOT", 1)
 		TNT1 A 0 A_FireCustomMissile("RifleCaseSpawn",5,0,6,-6)
 		PKCG E 1 BRIGHT 
 		TNT1 A 0 A_SetPitch(-1.0 + pitch)
 		PKCG B 1 A_SpawnItemEx("PlayerMuzzle1",30,5,30)
 		PKCG CD 1 A_SetPitch(0.5 + pitch)
-		
 		TNT1 A 0 A_ReFire
 		PKCG ABCDAABBCCCDDDD 1 A_WeaponReady(1)
 		Goto Ready
-	Spawn:
+Spawn:
 		MGUN A -1
 		Stop
 	}
 }
-
-
 ACTOR ClassicRocketLauncher : DoomWeapon
 {
 	Game Doom
@@ -285,19 +264,19 @@ ACTOR ClassicRocketLauncher : DoomWeapon
 	Tag "$TAG_ROCKETLAUNCHER"
 	States
 	{
-	Ready:
-	    TNT1 A 0 A_TakeInventory("Rocket_Launcher", 1)
+Ready:
+		TNT1 A 0 A_TakeInventory("Rocket_Launcher", 1)
 		PKRL A 1 A_WeaponReady
 		TNT1 A 0 A_TakeInventory("Rocket_Launcher", 1)
 		Loop
-	Deselect:
+Deselect:
 		PKRL A 1 A_Lower
 		Loop
-	Select:
+Select:
 		PKRL A 1 A_Raise
 		TNT1 A 0 A_TakeInventory("Rocket_Launcher", 1)
 		Loop
-	Fire:
+Fire:
 		PKRL BC 2 BRIGHT
 		TNT1 A 0 A_PlaySound ("DSRFIRE")
 		TNT1 A 0 A_FireCustomMissile("WeakRocket", 0, 1, 0, -10)
@@ -307,13 +286,11 @@ ACTOR ClassicRocketLauncher : DoomWeapon
 		PKRL AA 1 A_SetPitch(0.25 + pitch)
 		TNT1 A 0 A_Refire
 		Goto Ready
-	Spawn:
+Spawn:
 		LAUN A -1
 		Stop
 	}
 }
-
-
 ACTOR ClassicPlasmaRifle : DoomWeapon
 {
 	Game Doom
@@ -327,20 +304,20 @@ ACTOR ClassicPlasmaRifle : DoomWeapon
 	Tag "$TAG_PLASMARIFLE"
 	States
 	{
-	Ready:
-	    TNT1 A 0 A_TakeInventory("Plasma_Gun", 1)
+Ready:
+		TNT1 A 0 A_TakeInventory("Plasma_Gun", 1)
 		3LSG A 1 A_WeaponReady
 		TNT1 A 0 A_TakeInventory("Plasma_Gun", 1)
 		Loop
-	Deselect:
-	    TNT1 A 0 A_Takeinventory("HasPlasmaWeapon",1)
+Deselect:
+		TNT1 A 0 A_Takeinventory("HasPlasmaWeapon",1)
 		3LSG A 1 A_Lower
 		Loop
-	Select:
-	    TNT1 A 0 A_Giveinventory("HasPlasmaWeapon",1)
+Select:
+		TNT1 A 0 A_Giveinventory("HasPlasmaWeapon",1)
 		3LSG A 1 A_Raise
 		Loop
-	Fire:
+Fire:
 		TNT1 A 0 A_FireCustomMissile("ClassicPlasmaBall", 0, 1, 0, -10)
 		3LSF EF 1 BRIGHT
 		3KPL A 1
@@ -349,12 +326,11 @@ ACTOR ClassicPlasmaRifle : DoomWeapon
 		3KPL G 6
 		3KPL FFECDBA 1
 		Goto Ready
-	Spawn:
+Spawn:
 		PLAS A -1
 		Stop
 	}
 }
-
 ACTOR ClassicPlasmaBall
 {
 	Game Doom
@@ -372,14 +348,14 @@ ACTOR ClassicPlasmaBall
 	Obituary "$OB_MPPLASMARIFLE"
 	States
 	{
-	Spawn:
-	    TNT1 A 1
+Spawn:
+		TNT1 A 1
 		Goto Spawn2
-	Spawn2:
+Spawn2:
 		PLSS ABAB 1 Bright A_SpawnItem("BlueFlareSmall")
 		Loop
-	Death:
-	    TNT1 A 0
+Death:
+		TNT1 A 0
 		TNT1 A 0 A_CustomMissile ("BluePlasmaFire", 0, 0, random (0, 360), 2, random (0, 360))
 		TNT1 AAAAA 0 A_CustomMissile ("BluePlasmaParticle", 0, 0, random (0, 360), 2, random (0, 360))
 		PLSE ABC 2 BRIGHT A_SpawnItem("BlueFlare")

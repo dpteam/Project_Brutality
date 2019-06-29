@@ -1,7 +1,5 @@
 //-------------------- WEAPON & AMMO SPAWNERS --------------------//
 //--------------------- REDACTED - NOT NEEDED --------------------//
-
-
 //------------------ NOW THE FUN BEGINS ------------------//
 //-------------------- ENEMY SPAWNERS --------------------//
 //ZombieMan
@@ -11,7 +9,7 @@ Actor ZombieManPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("ZombieManPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(192,"NormalZombieManPack")
@@ -24,31 +22,31 @@ Actor ZombieManPackDiceMain
 		TNT1 A 1 A_Jump(110,"PlasmaZombiePack")
 		TNT1 A 1 A_Jump(256,"RifleCommandoPack")
 		Stop
-	RifleCommandoPack:
+RifleCommandoPack:
 		TNT1 A 0 A_RadiusGive("IsRifleCommando", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	PlasmaZombiePack:
+PlasmaZombiePack:
 		TNT1 A 0 A_RadiusGive("IsPlasmaZombie", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	MinigunZombiePack:
+MinigunZombiePack:
 		TNT1 A 0 A_RadiusGive("IsMinigunZombie", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	CarbineZombiePack:
+CarbineZombiePack:
 		TNT1 A 0 A_RadiusGive("IsCarbineZombie", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ScientistZombiePack:
+ScientistZombiePack:
 		TNT1 A 0 A_RadiusGive("IsScientistZombie", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	HelmetPistolZombieManPack:
+HelmetPistolZombieManPack:
 		TNT1 A 0 A_RadiusGive("IsHelmetPistolZombieMan", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	PistolZombieManPack:
+PistolZombieManPack:
 		TNT1 A 0 A_RadiusGive("IsPistolZombieMan", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	HelmetZombieManPack:
+HelmetZombieManPack:
 		TNT1 A 0 A_RadiusGive("IsHelmetZombieMan", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	NormalZombieManPack:
+NormalZombieManPack:
 		TNT1 A 0 A_RadiusGive("IsNormalZombieMan", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -60,7 +58,7 @@ Actor ShotgunGuyPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("ShotgunGuyPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(178,"NormalShotgunGuyPack")
@@ -73,31 +71,31 @@ Actor ShotgunGuyPackDiceMain
 		TNT1 A 1 A_Jump(80,"PyroSergeantPack")
 		TNT1 A 1 A_Jump(256,"HellTrooperPack")
 		Stop
-	HellTrooperPack:
+HellTrooperPack:
 		TNT1 A 1 A_RadiusGive("IsHellTrooper", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	PyroSergeantPack:
+PyroSergeantPack:
 		TNT1 A 1 A_RadiusGive("IsPyroSergeant", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	RocketLauncherGuyPack:
+RocketLauncherGuyPack:
 		TNT1 A 1 A_RadiusGive("IsRocketLauncherGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	QuadShotgunGuyPack:
+QuadShotgunGuyPack:
 		TNT1 A 1 A_RadiusGive("IsQuadShotgunGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	RiotShieldGuyPack:
+RiotShieldGuyPack:
 		TNT1 A 1 A_RadiusGive("IsRiotShieldGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ZspecOpsGuyPack:
+ZspecOpsGuyPack:
 		TNT1 A 1 A_RadiusGive("IsZspecOpsGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	AutoShotgunGuyPack:
+AutoShotgunGuyPack:
 		TNT1 A 1 A_RadiusGive("IsAutoShotgunGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	HelmetShotgunGuyPack:
+HelmetShotgunGuyPack:
 		TNT1 A 1 A_RadiusGive("IsHelmetShotgunGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	NormalShotgunGuyPack:
+NormalShotgunGuyPack:
 		TNT1 A 1 A_RadiusGive("IsNormalShotgunGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -109,7 +107,7 @@ Actor ChaingunGuyPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("ChaingunGuyPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(169,"NormalChaingunGuyPack")
@@ -119,22 +117,22 @@ Actor ChaingunGuyPackDiceMain
 		TNT1 A 1 A_Jump(80,"ClassicChaingunGuyPack")
 		TNT1 A 1 A_Jump(256,"RifleCommandoPack")
 		Stop
-	RifleCommandoPack:
+RifleCommandoPack:
 		TNT1 A 1 A_RadiusGive("IsRifleCommando", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ClassicChaingunGuyPack:
+ClassicChaingunGuyPack:
 		TNT1 A 1 A_RadiusGive("IsClassicChaingunGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	PlasmaZombiePack:
+PlasmaZombiePack:
 		TNT1 A 1 A_RadiusGive("IsPlasmaZombie", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	MinigunZombiePack:
+MinigunZombiePack:
 		TNT1 A 1 A_RadiusGive("IsMinigunZombie", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ChaingunMajorPack:
+ChaingunMajorPack:
 		TNT1 A 1 A_RadiusGive("IsChaingunMajor", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	NormalChaingunGuyPack:
+NormalChaingunGuyPack:
 		TNT1 A 1 A_RadiusGive("IsNormalChaingunGuy", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -146,7 +144,7 @@ Actor DoomImpDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("DoomImpPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(132,"BrownImpPack")
@@ -162,37 +160,37 @@ Actor DoomImpDiceMain
 		TNT1 A 1 A_Jump(100,"NetherDarkImpPack")
 		TNT1 A 1 A_Jump(256,"NetherDarkImpPack")
 		Stop
-	BrownImpPack:
+BrownImpPack:
 		TNT1 A 1 A_Jump(256,"NormalImpPack", "ImpVariant1Pack", "ImpVariant2Pack", "ImpVariant3Pack")
 		Stop
-	BlackImpPack:
+BlackImpPack:
 		TNT1 A 1 A_Jump(256,"STDarkImpPack","NamiDarkImpPack","VoidDarkImpPack","NetherDarkImpPack")
 		Stop				
-	NormalImpPack:
+NormalImpPack:
 		TNT1 A 1 A_RadiusGive("IsNormalImp", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ImpVariant1Pack:
+ImpVariant1Pack:
 		TNT1 A 1 A_RadiusGive("IsImpVariant1", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ImpVariant2Pack:
+ImpVariant2Pack:
 		TNT1 A 1 A_RadiusGive("IsImpVariant2", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ImpVariant3Pack:
+ImpVariant3Pack:
 		TNT1 A 1 A_RadiusGive("IsImpVariant3", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	SavageImpPack:
+SavageImpPack:
 		TNT1 A 1 A_RadiusGive("IsSavageImp", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	STDarkImpPack:
+STDarkImpPack:
 		TNT1 A 1 A_RadiusGive("IsSTDarkImp", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	NamiDarkImpPack:
+NamiDarkImpPack:
 		TNT1 A 1 A_RadiusGive("IsNamiDarkImp", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	VoidDarkImpPack:
+VoidDarkImpPack:
 		TNT1 A 1 A_RadiusGive("IsVoidDarkImp", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	NetherDarkImpPack:
+NetherDarkImpPack:
 		TNT1 A 1 A_RadiusGive("IsNetherDarkImp", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -204,20 +202,20 @@ Actor PinkyDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("PinkyPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(218,"PinkyPack")
 		TNT1 A 1 A_Jump(156,"BloodDemonPack")
 		TNT1 A 1 A_Jump(256,"MechPinkyPack")
 		Stop
-	BloodDemonPack:
+BloodDemonPack:
 		TNT1 A 1 A_RadiusGive("IsBloodDemon", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	MechPinkyPack:
+MechPinkyPack:
 		TNT1 A 1 A_RadiusGive("IsMechPinky", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	PinkyPack:
+PinkyPack:
 		TNT1 A 1 A_RadiusGive("IsPinky", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -229,20 +227,20 @@ Actor CacoPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("CacoPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(218,"CacoPack")
 		TNT1 A 1 A_Jump(156,"InfernalPack")
 		TNT1 A 1 A_Jump(256,"AfritPack")
 		Stop
-	AfritPack:
+AfritPack:
 		TNT1 A 1 A_RadiusGive("IsAfritCaco", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	InfernalPack:
+InfernalPack:
 		TNT1 A 1 A_RadiusGive("IsMagCaco", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	CacoPack:
+CacoPack:
 		TNT1 A 1 A_RadiusGive("IsNormalCaco", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -254,20 +252,20 @@ Actor BaronPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("BaronPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(218,"BaronPack")
 		TNT1 A 1 A_Jump(156,"CyberBaronPack")
 		TNT1 A 1 A_Jump(256,"BelphegorPack")
 		Stop
-	BaronPack:
+BaronPack:
 		TNT1 A 1 A_RadiusGive("IsBaron", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	CyberBaronPack:
+CyberBaronPack:
 		TNT1 A 1 A_RadiusGive("IsCyberBaron", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	BelphegorPack:
+BelphegorPack:
 		TNT1 A 1 A_RadiusGive("IsBelphegor", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -275,31 +273,31 @@ Actor BaronPackDiceMain
 // Lost Soul
 Actor LostSoulDiceMain 
 {
-    Monster
+	Monster
 	+LOOKALLAROUND
-    States
-    {
-    Spawn:
-        TNT1 A 0
-        TNT1 A 0 A_SpawnItemEx("LostSoulPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
-        TNT1 A 1 A_Jump(186,"IsNormalSoul")
-        TNT1 A 1 A_Jump(102,"IsPhantasm")
-        TNT1 A 1 A_Jump(90,"IsImpureSoul")
-        TNT1 A 1 A_Jump(256,"IsTiberiumSoul")
-        Stop
-    IsTiberiumSoul:
-        TNT1 A 1 A_RadiusGive("IsTiberiumSoul", RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
-        Stop
-    IsImpureSoul:
-        TNT1 A 1 A_RadiusGive("IsImpureSoul", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
-        Stop
-    IsPhantasm:
-        TNT1 A 1 A_RadiusGive("IsPhantasm", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
-        Stop
-    IsNormalSoul:
-        TNT1 A 1 A_RadiusGive("IsNormalSoul", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
-        Stop
-    }
+	States
+	{
+Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_SpawnItemEx("LostSoulPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
+		TNT1 A 1 A_Jump(186,"IsNormalSoul")
+		TNT1 A 1 A_Jump(102,"IsPhantasm")
+		TNT1 A 1 A_Jump(90,"IsImpureSoul")
+		TNT1 A 1 A_Jump(256,"IsTiberiumSoul")
+		Stop
+IsTiberiumSoul:
+		TNT1 A 1 A_RadiusGive("IsTiberiumSoul", RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
+		Stop
+IsImpureSoul:
+		TNT1 A 1 A_RadiusGive("IsImpureSoul", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
+		Stop
+IsPhantasm:
+		TNT1 A 1 A_RadiusGive("IsPhantasm", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
+		Stop
+IsNormalSoul:
+		TNT1 A 1 A_RadiusGive("IsNormalSoul", 290, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
+		Stop
+	}
 }
 //Pain Elemental
 Actor PainElementalPackDiceMain
@@ -308,7 +306,7 @@ Actor PainElementalPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("PainElementalPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(102,"PainElementalPack")
@@ -320,22 +318,22 @@ Actor PainElementalPackDiceMain
 		TNT1 A 1 A_Jump(255,"PainElementalPack")
 		TNT1 A 1 A_Jump(256,"ListIndexOutofBounds")
 		Stop
-	PainElementalPack:
+PainElementalPack:
 		TNT1 A 1 A_RadiusGive("IsPainElemental", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	SufferingElementalPack:
+SufferingElementalPack:
 		TNT1 A 1 A_RadiusGive("IsSufferingElemental", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	TriteElementalPack:
+TriteElementalPack:
 		TNT1 A 1 A_RadiusGive("IsTriteElemental", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ImpureElementalPack:
+ImpureElementalPack:
 		TNT1 A 1 A_RadiusGive("IsImpureElemental", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	OverlordHappened:
+OverlordHappened:
 		TNT1 A 1 A_RadiusGive("IsOverlord", 1, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1) //Don't change the radius
 		Stop
-	ListIndexOutofBounds:
+ListIndexOutofBounds:
 		TNT1 A 1 A_RadiusGive("IsListIndexOutofBounds", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -347,20 +345,20 @@ Actor HellKnightPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("HellKnightPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(218,"HellKnightPack")
 		TNT1 A 1 A_Jump(156,"CyberKnightPack")
 		TNT1 A 1 A_Jump(256,"PaladinPack")
 		Stop
-	HellKnightPack:
+HellKnightPack:
 		TNT1 A 1 A_RadiusGive("IsHellKnight", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	CyberKnightPack:
+CyberKnightPack:
 		TNT1 A 1 A_RadiusGive("IsCyberKnight", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	PaladinPack:
+PaladinPack:
 		TNT1 A 1 A_RadiusGive("IsPaladin", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -372,20 +370,20 @@ Actor MancubusPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("MancubusPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(186,"MancubusPack")
 		TNT1 A 1 A_Jump(156,"DaedabusPack")
 		TNT1 A 1 A_Jump(256,"VolcabusPack")
 		Stop
-	MancubusPack:
+MancubusPack:
 		TNT1 A 1 A_RadiusGive("IsMancubus", 540, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	DaedabusPack:
+DaedabusPack:
 		TNT1 A 1 A_RadiusGive("IsDaedabus", 540, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	VolcabusPack:
+VolcabusPack:
 		TNT1 A 1 A_RadiusGive("IsVolcabus", 540, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -397,20 +395,20 @@ Actor RevenantPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("RevenantPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(186,"RevenantPack")
 		TNT1 A 1 A_Jump(142,"BeamRevenantsPack")
 		TNT1 A 1 A_Jump(256,"DraugrPack")
 		Stop
-	RevenantPack:
+RevenantPack:
 		TNT1 A 1 A_RadiusGive("IsRevenant", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	BeamRevenantsPack:
+BeamRevenantsPack:
 		TNT1 A 1 A_RadiusGive("IsBeamRevenant", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	DraugrPack:
+DraugrPack:
 		TNT1 A 1 A_RadiusGive("IsDraugr", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -422,7 +420,7 @@ Actor ArchvilePackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("ArchvilePackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(192,"ArchvilePack")
@@ -430,16 +428,16 @@ Actor ArchvilePackDiceMain
 		TNT1 A 1 A_Jump(138,"HellionPack")
 		TNT1 A 1 A_Jump(256,"FleshWizardPack")
 		Stop
-	ArchvilePack:
+ArchvilePack:
 		TNT1 A 1 A_RadiusGive("IsArchvile", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	IceVilePack:
+IceVilePack:
 		TNT1 A 1 A_RadiusGive("IsIceVile", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	HellionPack:
+HellionPack:
 		TNT1 A 1 A_RadiusGive("IsHellion", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	FleshWizardPack:
+FleshWizardPack:
 		TNT1 A 1 A_RadiusGive("IsFleshWizard", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}
@@ -451,7 +449,7 @@ Actor ArachnotronPackDiceMain
 	+LOOKALLAROUND
 	States
 	{
-	Spawn:
+Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_SpawnItemEx("ArachnotronPackSpawner",0,0,0,0,0,0,0,SXF_TRANSFERSPECIAL | SXF_TRANSFERAMBUSHFLAG | SXF_TRANSFERPOINTERS | 288,0,tid)
 		TNT1 A 1 A_Jump(220,"ArachnotronPack")
@@ -459,16 +457,16 @@ Actor ArachnotronPackDiceMain
 		TNT1 A 1 A_Jump(138,"EliteArachnotronPack")
 		TNT1 A 1 A_Jump(256,"ArachnophytePack")
 		Stop
-	ArachnotronPack:
+ArachnotronPack:
 		TNT1 A 1 A_RadiusGive("IsArachnotron", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	InfernalArachnotronPack:
+InfernalArachnotronPack:
 		TNT1 A 1 A_RadiusGive("IsInfernalArachnotron", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	EliteArachnotronPack:
+EliteArachnotronPack:
 		TNT1 A 1 A_RadiusGive("IsEliteArachnotron", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
-	ArachnophytePack:
+ArachnophytePack:
 		TNT1 A 1 A_RadiusGive("IsArachnophyte", 386, RGF_GIVESELF /*| RGF_OBJECTS | RGF_MONSTERS | RGF_NOSIGHT*/, 1)
 		Stop
 	}

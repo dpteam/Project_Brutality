@@ -1,15 +1,11 @@
-
 Actor IsPlayingAsPurist : Inventory
 {
-inventory.maxamount 1
+	inventory.maxamount 1
 }
-
-
 ACTOR Purist : BrutalDoomer
 {
 	Speed 1.0
 	Player.DisplayName "Brutal Doom v21"
-	
 	Player.WeaponSlot 1, Vanilla_Chain_saw, BrutalAxe, Melee_Attacks
 	Player.WeaponSlot 2, VanillaSMG, VanillaPistol  
 	Player.WeaponSlot 3, Vanilla_Shot_Gun, AssaultShotgun, Vanilla_SSG
@@ -20,7 +16,6 @@ ACTOR Purist : BrutalDoomer
 	Player.WeaponSlot 8, HellishMissileLauncher
 	Player.WeaponSlot 9, FlameCannon
 	Player.WeaponSlot 0, SecretWeapon_MP40, HitlersBuzzsaw
-	
 	Player.StartItem "VanillaRifle"
 	Player.StartItem "VanillaPistol"
 	Player.StartItem "Melee_Attacks"
@@ -37,15 +32,12 @@ ACTOR Purist : BrutalDoomer
 	Player.StartItem "IsPlayer", 1
 	Player.StartItem "IsPlayingAsPurist", 1
 	Player.CrouchSprite "PLYC"
-	
 	Mass 100
 }
-
 ACTOR BrutalDoomerPistolStart : BrutalDoomer
 {
 	Speed 1.0
 	Player.DisplayName "PB Pistol Start"
-	
 	Player.StartItem "BDPistol"
 	Player.StartItem "Melee_Attacks"
 	Player.StartItem "NewClip", 90
@@ -76,5 +68,4 @@ ACTOR BrutalDoomerPistolStart : BrutalDoomer
 	Player.StartItem "MP40Ammo", 32
 	Player.StartItem "HellAmmo", 50
 	Player.StartItem "GrenadeRounds", 6
-	
 }

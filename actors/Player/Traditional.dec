@@ -1,15 +1,11 @@
-
 Actor IsPlayingAsTraditional : Inventory
 {
-inventory.maxamount 1
+	inventory.maxamount 1
 }
-
-
 ACTOR Traditional : BrutalDoomer
 {
 	Speed 1.0
 	Player.DisplayName "Traditional"
-	
 	Player.WeaponSlot 1, Traditional_Chainsaw, Traditional_Fist
 	Player.WeaponSlot 2, Traditional_Pistol
 	Player.WeaponSlot 3, Traditional_Shotgun, Traditional_SSG
@@ -20,7 +16,6 @@ ACTOR Traditional : BrutalDoomer
 	Player.WeaponSlot 8, Nothing
 	Player.WeaponSlot 9, Nothing
 	Player.WeaponSlot 0, HitlersBuzzsaw
-	
 	Player.StartItem "Traditional_Pistol"
 	Player.StartItem "Traditional_Fist"
 	Player.StartItem "NewClip", 60
@@ -28,6 +23,5 @@ ACTOR Traditional : BrutalDoomer
 	Player.StartItem "IsPlayingAsPurist", 1
 	Player.StartItem "IsPlayingAsTraditional", 1
 	Player.CrouchSprite "PLYC"
-	
 	Mass 100
 }
